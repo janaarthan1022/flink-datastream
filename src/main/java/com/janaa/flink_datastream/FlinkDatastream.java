@@ -68,7 +68,7 @@ public class FlinkDatastream {
 				kafkaProps);
 		//kafkaConsumer.setStartFromEarliest();
 		DataStream<String> oddKafkaStream = env.addSource(oddConsumer);
-		evenKafkaStream.writeAsText(kafkaProps.getProperty(FlinkDatastreamConstants.OUTPUT_FILE_ODD));
+		oddKafkaStream.writeAsText(kafkaProps.getProperty(FlinkDatastreamConstants.OUTPUT_FILE_ODD));
 		
 		
 		
