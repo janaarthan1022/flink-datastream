@@ -8,16 +8,27 @@
 #### Persist all published message onto a datastore of your choice (i.e. file, database, in-mem db)
 
 ### Command to run flink job
-bin/flink run /Users/janaarthanm/Documents/shift2024/flink/flink-datastream/target/flink-datastream-0.0.1-SNAPSHOT-jar-with-dependencies.jar /Users/janaarthanm/Documents/shift2024/flink/flink-datastream/src/main/resources/flink-datastream.properties
+
+bin/flink run /Users/janaarthanm/Documents/shift2024/flink/flink-datastream/target/flink-datastream-0.0.1-SNAPSHOT-jar-with-dependencies.jar  
+/Users/janaarthanm/Documents/shift2024/flink/flink-datastream/src/main/resources/flink-datastream.properties
+
 
 ### Kafka Source Topic console producer
+
 bin/kafka-console-producer --bootstrap-server localhost:9092 --topic input-topic
+
 >{"Name":"aaa","Address":"Bangalore","Date of Birth":"1990-10-10"}
+
 >{"Name":"aaa","Address":"Bangalore","Date of Birth":"1989-10-10"}
 
+
+
 ### Even Age topic console consumer
+
 [appuser@5c5f08ffcaae usr]$ bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic even-topic
+
 {"Address":"Bangalore","Date of Birth":"1990-10-10","Age":34,"Name":"aaa"}
+
 
 ### Odd Age topic console consumer
 [appuser@5c5f08ffcaae usr]$ bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic odd-topic
