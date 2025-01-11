@@ -35,9 +35,14 @@ bin/kafka-console-producer --bootstrap-server localhost:9092 --topic input-topic
 {"Address":"Bangalore","Date of Birth":"1989-10-10","Age":35,"Name":"aaa"}
 
 ### Persisting even-topic to even.txt file
+
 janaarthanm@Janaarthans-Air flink-1.19.1 % cat even.txt 
+
 {"Address":"Bangalore","Date of Birth":"1990-10-10","Age":34,"Name":"aaa"}
 
+
 ### Persisting odd-topic to odd.txt file
+
 janaarthanm@Janaarthans-Air flink-1.19.1 % cat odd.txt 
+
 {"Address":"Bangalore","Date of Birth":"1989-10-10","Age":35,"Name":"aaa"}
